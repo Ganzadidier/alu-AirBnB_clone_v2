@@ -5,10 +5,11 @@ import os
 # Define the web servers' IP addresses
 env.hosts = ['54.234.59.93', '34.224.89.36']
 
+
 def do_deploy(archive_path):
     """
     Distributes an archive to the web servers and deploys it.
-    
+
     Args:
     archive_path (str): The path to the archive file.
 
@@ -22,7 +23,7 @@ def do_deploy(archive_path):
         # Get the archive file name (web_static_YYYYMMDDHHMMSS.tgz)
         archive_file = archive_path.split("/")[-1]
 
-        # Extract the file name without the extension (web_static_YYYYMMDDHHMMSS)
+        # Extract the file name without the extension
         archive_no_ext = archive_file.split(".")[0]
 
         # Define the remote path where the archive will be uploaded
